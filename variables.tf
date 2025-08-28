@@ -24,8 +24,14 @@ variable "public_subnets" {
     name = string
     cidr_block = string
     az         = string
-  }))
-  
-  default = []
-  
+  }))  
+}
+
+variable "private_subnets" {
+  description = "Lista de subnets privadas"
+  type = list(object({
+    name = string
+    cidr_block = string
+    az         = string
+  }))  
 }
